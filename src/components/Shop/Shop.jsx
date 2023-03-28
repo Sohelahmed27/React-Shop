@@ -15,10 +15,24 @@ const Shop = () => {
   }, [])
 useEffect(
   ()=>{
-    const storedCart =getShoppingCart();
-    console.log(storedCart);
+   
+    const storedCart = getShoppingCart();
+    const savedCard = [];
+    
+    for(const id in storedCart){
+      
+      const addedProduct = products.find(product => product.id===id);
+      if(addedProduct){
+        console.log(addedProduct);
+        const quantity= storedCart[id];
+         addedProduct.quantity = quantity;
+        console.log(addedProduct);
+        savedCard.push(addedProduct);
+      }
+    }
+    setCart(savedCard);
   }
-  ,[])
+  ,[products])
 
   const addToCart =(product)=>{
     console.log(product)
