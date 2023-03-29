@@ -35,8 +35,21 @@ useEffect(
   ,[products])
 
   const addToCart =(product)=>{
-    console.log(product)
-    let newCart = [...cart, product];
+    // console.log(product)
+    let newCart =[];
+    // let newCart = [...cart, product];
+    //if product doesn't exist set card 1, if exist update the card
+    const exist = cart.find(pd => pd.id ===product.id)
+    if(!exist){
+      product.quantity = 1;
+      newCart = [...cart, product];
+    }
+    else{
+      exist.quantity = exist.quantity + 1;
+      const remaining = cart.filter(pd => pd.id !== product.id);
+      newCart = [...remaining, exist]
+    }
+
     setCart(newCart);
     addToDb(product.id)
     
