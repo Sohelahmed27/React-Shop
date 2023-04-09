@@ -8,3 +8,19 @@
   grid-template-columns:repeat(3, 1fr);
   gap:45px;
 }
+
+.order-proceed{
+  width:90%;
+  margin: 10px auto;
+  background-color:orange;
+  border-radius:8px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+  font-size:21px;
+  height:40px;
+}
+.cart a{
+  text-decoration:none;
+}

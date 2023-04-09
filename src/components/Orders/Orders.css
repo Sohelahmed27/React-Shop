@@ -3,3 +3,16 @@
   margin:20px auto;
   
 }
+
+.check-out{
+  width:90%;
+  margin: 10px auto;
+  background-color:orange;
+  border-radius:8px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+  font-size:21px;
+  height:40px;
+}
