@@ -66,7 +66,8 @@ useEffect(
         }
       </div>
       <div className="card-container">
-      <Cart cart={cart}></Cart>
+      <Cart cart={cart}
+      ></Cart>
       </div>
     </div>
   );
